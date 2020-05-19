@@ -7,7 +7,17 @@
   "types": "dist/observable-base.d.ts",
   "main": "dist/observable-base.js",
   "module": "dist-esm/observable-base.js",
-  "keywords": [],
+  "keywords": [
+    "observe",
+    "observer",
+    "observable",
+    "subscribe",
+    "subscriber",
+    "subscribable",
+    "base",
+    "base class",
+    "base classes"
+  ],
   "scripts": {
     "build:dist": "rimraf dist/* && copyfiles -u 1 src/**/*.d.ts dist && tsc",
     "build:dist-esm": "rimraf dist-esm/* && tsc -p tsconfig.esm.json",
