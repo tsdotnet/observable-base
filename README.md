@@ -4,7 +4,7 @@
 ![npm-publish](https://github.com/tsdotnet/observable-base/workflows/npm-publish/badge.svg)
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/observable-base.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/observable-base)
 
-Base classes for implementing classic style observables.
+A simple set of subscription base classes for implementing .NET style observables.
 
 Subscriptions are `Disposable` objects with scope independent `dispose()` methods.
 
