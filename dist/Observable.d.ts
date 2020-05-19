@@ -11,7 +11,8 @@ import Observer from './Observer';
 import Subscribable from './Subscribable';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export default interface Observable<T> extends Subscribable<Observer<T>>
+export default interface Observable<T>
+	extends Subscribable<Observer<T>>
 {
 
 }

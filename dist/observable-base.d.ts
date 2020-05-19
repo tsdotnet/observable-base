@@ -6,7 +6,7 @@
  * @packageDocumentation
  * @module observable-base
  */
-import SubscribableBase from './SubscribableBase';
-import ObservableNodeBase from './ObservableNodeBase';
 import ObservableBase from './ObservableBase';
+import ObservableNodeBase from './ObservableNodeBase';
+import SubscribableBase from './SubscribableBase';
 export { ObservableBase, ObservableNodeBase, SubscribableBase };
