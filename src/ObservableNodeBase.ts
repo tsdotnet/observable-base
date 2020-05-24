@@ -24,7 +24,7 @@ export default class ObservableNodeBase<T>
 		this._onNext(value);
 	}
 
-	onError (error: any): void
+	onError (error: unknown): void
 	{
 		this._onError(error);
 	}

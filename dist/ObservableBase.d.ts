@@ -16,6 +16,6 @@ export default abstract class ObservableBase<T> extends SubscribableBase<Observe
     subscribe(subscriber: Observer<T>): Disposable;
     subscribe(subscriber: Action<T>, onError?: Action<any>, onCompleted?: Closure): Disposable;
     protected _onNext(value: T): void;
-    protected _onError(error: any): void;
+    protected _onError(error: unknown): void;
     protected _onCompleted(): void;
 }

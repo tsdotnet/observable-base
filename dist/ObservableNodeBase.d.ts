@@ -14,6 +14,6 @@ import Observer from './Observer';
  */
 export default class ObservableNodeBase<T> extends ObservableBase<T> implements Observer<T> {
     onNext(value: T): void;
-    onError(error: any): void;
+    onError(error: unknown): void;
     onCompleted(): void;
 }

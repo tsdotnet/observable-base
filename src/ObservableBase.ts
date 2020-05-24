@@ -56,7 +56,7 @@ export default abstract class ObservableBase<T>
 		);
 	}
 
-	protected _onError (error: any): void
+	protected _onError (error: unknown): void
 	{
 		processAction(
 			this._getSubscribers()?.toArray(),

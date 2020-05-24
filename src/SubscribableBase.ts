@@ -94,7 +94,7 @@ export default class SubscribableBase<TSubscriber>
 		return u;
 	}
 
-	protected _onDispose ()
+	protected _onDispose (): void
 	{
 		super._onDispose();
 		this._unsubscribeAll();
