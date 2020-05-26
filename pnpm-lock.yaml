@@ -4,7 +4,7 @@ dependencies:
   '@tsdotnet/disposable': 1.1.19
   '@tsdotnet/exceptions': 1.0.16
   '@tsdotnet/linked-node-list': 1.3.13
-  '@tsdotnet/ordered-registry': 1.0.14
+  '@tsdotnet/ordered-registry': 1.0.16
   tslib: 2.0.0
 devDependencies:
   '@types/chai': 4.2.11
@@ -250,7 +250,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-KBJhR1hstJnNXi4AwNuRUs6XhjNbUfOVk+ZL7lH+/XkctNO8i+7Wfch/XGFmdmBsPpFrR427Cqv0lRW5WUUV/w==
-  /@tsdotnet/ordered-registry/1.0.14:
+  /@tsdotnet/ordered-registry/1.0.16:
     dependencies:
       '@tsdotnet/collection-base': 2.0.6
       '@tsdotnet/common-interfaces': 1.0.4
@@ -260,7 +260,7 @@ packages:
       tslib: 2.0.0
     dev: false
     resolution:
-      integrity: sha512-j4J499PVF5aUlpfiaVsmCmzUWLtQblQUaoj2S9GYgcI8tHJiT5/xv+r2SuzJ31xC3TVHQmf2SsMjgdF4AqYkQQ==
+      integrity: sha512-Or5S6kyJWS3MpWyFgn2uyE5ZNcVCJ49UIGipnzvNn0KG2k+tfx2LrWCDG1R6LIpi1vqTb1LQDqtm99FB5AQbkw==
   /@tsdotnet/type/1.0.8:
     dependencies:
       '@tsdotnet/common-interfaces': 1.0.4
@@ -3082,7 +3082,7 @@ specifiers:
   '@tsdotnet/disposable': ^1.1.19
   '@tsdotnet/exceptions': ^1.0.16
   '@tsdotnet/linked-node-list': ^1.3.13
-  '@tsdotnet/ordered-registry': ^1.0.14
+  '@tsdotnet/ordered-registry': ^1.0.16
   '@types/chai': ^4.2.11
   '@types/mocha': ^7.0.2
   '@typescript-eslint/eslint-plugin': ^3.0.1
