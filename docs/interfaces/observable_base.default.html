@@ -3,10 +3,11 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Subscribable | @tsdotnet/observable-base - v1.0.15</title>
+	<title>default | @tsdotnet/observable-base - v1.0.15</title>
 	<meta name="description" content="Documentation for @tsdotnet/observable-base - v1.0.15">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
 </head>
 <body>
 <header>
@@ -49,16 +50,16 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">Globals</a>
+					<a href="../index.html">@tsdotnet/observable-base - v1.0.15</a>
 				</li>
 				<li>
 					<a href="../modules/observable_base.html">observable-base</a>
 				</li>
 				<li>
-					<a href="observable_base.subscribable.html">Subscribable</a>
+					<a href="observable_base.default.html">default</a>
 				</li>
 			</ul>
-			<h1>Interface Subscribable&lt;TSubscriber&gt;</h1>
+			<h1>Interface default&lt;TSubscriber&gt;</h1>
 		</div>
 	</div>
 </header>
@@ -80,10 +81,10 @@
 						<span class="tsd-signature-type">Disposable</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">Subscribable</span>
+								<span class="target">default</span>
 								<ul class="tsd-hierarchy">
 									<li>
-										<a href="_observable_d_.observable.html" class="tsd-signature-type">Observable</a>
+										<a href="observable.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a>
 									</li>
 								</ul>
 							</li>
@@ -98,9 +99,8 @@
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface tsd-is-inherited"><a href="observable_base.subscribable.html#dispose" class="tsd-kind-icon">dispose</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="observable_base.subscribable.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="observable_base.subscribable.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="observable_base.default.html#subscribe" class="tsd-kind-icon">subscribe</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="observable_base.default.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a></li>
 							</ul>
 						</section>
 					</div>
@@ -108,35 +108,17 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-					<a name="dispose" class="tsd-anchor"></a>
-					<h3>dispose</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<p>Inherited from <a href="observable_base.subscribable.html">Subscribable</a>.<a href="observable_base.subscribable.html#dispose">dispose</a></p>
-								<ul>
-									<li>Defined in node_modules/.pnpm/@tsdotnet/disposable@1.1.20/node_modules/@tsdotnet/disposable/dist/Disposable.d.ts:9</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 					<a name="subscribe" class="tsd-anchor"></a>
 					<h3>subscribe</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>observer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TSubscriber</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Disposable</span></li>
+						<li class="tsd-signature tsd-kind-icon">subscribe<span class="tsd-signature-symbol">(</span>observer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TSubscriber</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">default</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/observables/blob/4676024/src/Subscribable.d.ts#L15">src/Subscribable.d.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/observables/blob/7828b17/src/Subscribable.d.ts#L15">Subscribable.d.ts:15</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -145,7 +127,7 @@
 									<h5>observer: <span class="tsd-signature-type">TSubscriber</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Disposable</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">default</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -159,7 +141,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tsdotnet/observables/blob/4676024/src/Subscribable.d.ts#L17">src/Subscribable.d.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/tsdotnet/observables/blob/7828b17/src/Subscribable.d.ts#L17">Subscribable.d.ts:17</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -177,47 +159,47 @@
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="globals  ">
-						<a href="../index.html"><em>Globals</em></a>
+					<li class=" ">
+						<a href="../index.html">Exports</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_observable_d_.html">&quot;<wbr>Observable.d&quot;</a>
+						<a href="../modules/observable.html">Observable</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_observer_d_.html">&quot;<wbr>Observer.d&quot;</a>
+						<a href="../modules/observer.html">Observer</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/_subscription_.html">&quot;<wbr>Subscription&quot;</a>
+						<a href="../modules/subscription.html">Subscription</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/observable_base.html">observable-<wbr>base</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/observable_base.html">observable-<wbr>base</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/observable_base.html">observable-<wbr>base</a>
 					</li>
 					<li class="current tsd-kind-module">
+						<a href="../modules/observable_base.html">observable-<wbr>base</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/observable_base.html">observable-<wbr>base</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/observable_base.observablebase.html" class="tsd-kind-icon">Observable<wbr>Base</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/observable_base.observablenodebase.html" class="tsd-kind-icon">Observable<wbr>Node<wbr>Base</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="../classes/observable_base.subscribablebase.html" class="tsd-kind-icon">Subscribable<wbr>Base</a>
-					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="observable_base.subscribable.html" class="tsd-kind-icon">Subscribable</a>
+						<a href="observable_base.default.html" class="tsd-kind-icon">default</a>
 						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface tsd-is-inherited">
-								<a href="observable_base.subscribable.html#dispose" class="tsd-kind-icon">dispose</a>
+							<li class=" tsd-kind-method tsd-parent-kind-interface">
+								<a href="observable_base.default.html#subscribe" class="tsd-kind-icon">subscribe</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="observable_base.subscribable.html#subscribe" class="tsd-kind-icon">subscribe</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="observable_base.subscribable.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a>
+								<a href="observable_base.default.html#unsubscribe" class="tsd-kind-icon">unsubscribe</a>
 							</li>
 						</ul>
 					</li>
@@ -247,6 +229,5 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
