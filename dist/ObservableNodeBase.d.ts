@@ -1,7 +1,3 @@
-/**
- * @packageDocumentation
- * @module observable-base
- */
 /*!
  * @author electricessence / https://github.com/electricessence/
  * @license MIT

@@ -6,7 +6,6 @@
 *   https://msdn.microsoft.com/en-us/library/dd990377.aspx
 */
 
-
 import Observer from './Observer';
 import Subscribable from './Subscribable';
 

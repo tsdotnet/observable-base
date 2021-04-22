@@ -3,10 +3,6 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-/**
- * @packageDocumentation
- * @module observable-base
- */
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SubscribableBase = exports.ObservableNodeBase = exports.ObservableBase = void 0;
 const tslib_1 = require("tslib");
