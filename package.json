@@ -1,6 +1,6 @@
 {
   "name": "@tsdotnet/observable-base",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "description": "A simple set of subscription base classes for implementing .NET style observables.",
   "author": "electricessence",
   "license": "MIT",
