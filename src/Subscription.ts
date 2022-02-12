@@ -10,7 +10,7 @@ import Subscribable from './Subscribable';
  * A registration that can be disposed in order to cancel publishing to a subscriber.
  */
 export default class Subscription<T>
-	implements DisposableAware
+implements DisposableAware
 {
 	constructor (
 		private _subscribable: Subscribable<T>,

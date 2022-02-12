@@ -18,12 +18,12 @@ export default abstract class ObservableBase<T>
 	implements Observable<T>
 {
 
-	subscribe (subscriber: Observer<T>): Disposable
+	subscribe (subscriber: Observer<T>): Disposable;
 
 	subscribe (
 		subscriber: Action<T>,
 		onError?: Action<any>,
-		onCompleted?: Closure): Disposable
+		onCompleted?: Closure): Disposable;
 
 	subscribe (
 		subscriber: Observer<T> | Action<T>,

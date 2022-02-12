@@ -73,10 +73,10 @@ export default class SubscribableBase<TSubscriber>
 		return this.__subscriptions?.map(node => node?.value.subscriber);
 	}
 
-	protected _unsubscribeAll (): undefined
-	protected _unsubscribeAll (returnSubscribers: false): undefined
-	protected _unsubscribeAll (returnSubscribers: true): TSubscriber[] | undefined
-	protected _unsubscribeAll (returnSubscribers: boolean): TSubscriber[] | undefined
+	protected _unsubscribeAll (): undefined;
+	protected _unsubscribeAll (returnSubscribers: false): undefined;
+	protected _unsubscribeAll (returnSubscribers: true): TSubscriber[] | undefined;
+	protected _unsubscribeAll (returnSubscribers: boolean): TSubscriber[] | undefined;
 	protected _unsubscribeAll (returnSubscribers: boolean = false): TSubscriber[] | undefined
 	{
 		const _ = this;
