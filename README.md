@@ -10,4 +10,4 @@ Subscriptions are `Disposable` objects with scope independent `dispose()` method
 
 ## Docs
 
-[tsdotnet.github.io/observable-base](https://tsdotnet.github.io/observable-base/modules/observable_base.html)
+[tsdotnet.github.io/observable-base](https://tsdotnet.github.io/observable-base/)
