@@ -6,9 +6,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const disposable_1 = require("@tsdotnet/disposable");
-const dispose_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/disposable/dist/dispose"));
-const ordered_registry_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/ordered-registry"));
-const Subscription_1 = (0, tslib_1.__importDefault)(require("./Subscription"));
+const dispose_1 = tslib_1.__importDefault(require("@tsdotnet/disposable/dist/dispose"));
+const ordered_registry_1 = tslib_1.__importDefault(require("@tsdotnet/ordered-registry"));
+const Subscription_1 = tslib_1.__importDefault(require("./Subscription"));
 const NAME = 'SubscribableBase';
 /**
  * Base class for implementing any subscribable class that expects `Disposable` for releasing subscriptions.

@@ -6,8 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const ArgumentException_1 = (0, tslib_1.__importDefault)(require("@tsdotnet/exceptions/dist/ArgumentException"));
-const SubscribableBase_1 = (0, tslib_1.__importDefault)(require("./SubscribableBase"));
+const ArgumentException_1 = tslib_1.__importDefault(require("@tsdotnet/exceptions/dist/ArgumentException"));
+const SubscribableBase_1 = tslib_1.__importDefault(require("./SubscribableBase"));
 // Can be used as a base class, mixin, or simply reference on how to implement the pattern.
 class ObservableBase extends SubscribableBase_1.default {
     subscribe(subscriber, onError, onCompleted) {
