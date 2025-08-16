@@ -3,8 +3,8 @@
  * @license MIT
  */
 
-import DisposableAware from '@tsdotnet/disposable/dist/DisposableAware';
-import Subscribable from './Subscribable';
+import type {DisposableAware} from '@tsdotnet/disposable';
+import type Subscribable from './Subscribable';
 
 /**
  * A registration that can be disposed in order to cancel publishing to a subscriber.

@@ -6,27 +6,11 @@
  * A registration that can be disposed in order to cancel publishing to a subscriber.
  */
 export default class Subscription {
+    _subscribable;
+    _subscriber;
     constructor(_subscribable, _subscriber) {
         this._subscribable = _subscribable;
         this._subscriber = _subscriber;
-        /**
-         * Cancels a subscription.
-         */
-        this.dispose = () => {
-            const subscriber = this.subscriber;
-            const subscribable = this._subscribable;
-            // Release this reference.  It will prevent potential unwanted recursion.
-            this._subscribable = null;
-            try {
-                if (subscriber && subscribable) {
-                    subscribable.unsubscribe(subscriber);
-                }
-            }
-            finally {
-                // Keep this reference until the end so it might be identified.
-                this._subscriber = null;
-            }
-        };
         if (!_subscribable || !_subscriber)
             throw 'Subscribable and subscriber cannot be null.';
     }
@@ -58,5 +42,23 @@ export default class Subscription {
     get wasDisposed() {
         return !this._subscribable || !this._subscriber;
     }
+    /**
+     * Cancels a subscription.
+     */
+    dispose = () => {
+        const subscriber = this.subscriber;
+        const subscribable = this._subscribable;
+        // Release this reference.  It will prevent potential unwanted recursion.
+        this._subscribable = null;
+        try {
+            if (subscriber && subscribable) {
+                subscribable.unsubscribe(subscriber);
+            }
+        }
+        finally {
+            // Keep this reference until the end so it might be identified.
+            this._subscriber = null;
+        }
+    };
 }
 //# sourceMappingURL=Subscription.js.map

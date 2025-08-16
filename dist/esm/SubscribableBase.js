@@ -2,8 +2,7 @@
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-import { DisposableBase } from '@tsdotnet/disposable';
-import dispose from '@tsdotnet/disposable/dist/dispose';
+import { DisposableBase, dispose } from '@tsdotnet/disposable';
 import OrderedRegistry from '@tsdotnet/ordered-registry';
 import Subscription from './Subscription';
 const NAME = 'SubscribableBase';
@@ -11,6 +10,7 @@ const NAME = 'SubscribableBase';
  * Base class for implementing any subscribable class that expects `Disposable` for releasing subscriptions.
  */
 export default class SubscribableBase extends DisposableBase {
+    __subscriptions;
     constructor() {
         super(NAME);
     }
@@ -22,17 +22,15 @@ export default class SubscribableBase extends DisposableBase {
      * @return {Disposable}
      */
     subscribe(subscriber) {
-        var _a;
-        const _ = this;
-        _.throwIfDisposed();
-        let s = (_a = this.__subscriptions) === null || _a === void 0 ? void 0 : _a.get(subscriber);
+        this.throwIfDisposed();
+        let s = this.__subscriptions?.get(subscriber);
         if (s)
             return s; // Ensure only one instance of the existing subscription exists.
-        let _s = _.__subscriptions;
+        let _s = this.__subscriptions;
         if (!_s)
-            _.__subscriptions = _s
+            this.__subscriptions = _s
                 = new OrderedRegistry();
-        s = new Subscription(_, subscriber);
+        s = new Subscription(this, subscriber);
         _s.add(subscriber, s);
         return s;
     }
@@ -41,8 +39,7 @@ export default class SubscribableBase extends DisposableBase {
      * @param {TSubscriber} subscriber
      */
     unsubscribe(subscriber) {
-        var _a, _b;
-        (_b = (_a = this.__subscriptions) === null || _a === void 0 ? void 0 : _a.remove(subscriber)) === null || _b === void 0 ? void 0 : _b.dispose();
+        this.__subscriptions?.remove(subscriber)?.dispose();
     }
     /**
      * Cancels (disposes) all subscriptions.
@@ -51,12 +48,10 @@ export default class SubscribableBase extends DisposableBase {
         this._unsubscribeAll();
     }
     _getSubscribers() {
-        var _a;
-        return (_a = this.__subscriptions) === null || _a === void 0 ? void 0 : _a.map(node => node === null || node === void 0 ? void 0 : node.value.subscriber);
+        return this.__subscriptions?.map(node => node?.value.subscriber);
     }
     _unsubscribeAll(returnSubscribers = false) {
-        const _ = this;
-        const _s = _.__subscriptions;
+        const _s = this.__subscriptions;
         if (!_s)
             return undefined;
         const s = _s.map(n => n.value).toArray();
@@ -70,7 +65,7 @@ export default class SubscribableBase extends DisposableBase {
         this._unsubscribeAll();
         const s = this.__subscriptions;
         this.__subscriptions = undefined;
-        s === null || s === void 0 ? void 0 : s.dispose();
+        s?.dispose();
     }
 }
 //# sourceMappingURL=SubscribableBase.js.map

@@ -5,10 +5,10 @@
  */
 
 import {Action, Closure} from '@tsdotnet/common-interfaces';
-import Disposable from '@tsdotnet/disposable/dist/Disposable';
-import ArgumentException from '@tsdotnet/exceptions/dist/ArgumentException';
-import Observable from './Observable';
-import Observer from './Observer';
+import {type Disposable} from '@tsdotnet/disposable';
+import {ArgumentException} from '@tsdotnet/exceptions';
+import type Observable from './Observable';
+import type Observer from './Observer';
 import SubscribableBase from './SubscribableBase';
 
 // Can be used as a base class, mixin, or simply reference on how to implement the pattern.
@@ -48,7 +48,7 @@ export default abstract class ObservableBase<T>
 	{
 		processAction(
 			this._getSubscribers()?.toArray(),
-			s => { s.onNext && s.onNext(value); }
+			s => { if(s.onNext) s.onNext(value); }
 		);
 	}
 
@@ -56,7 +56,7 @@ export default abstract class ObservableBase<T>
 	{
 		processAction(
 			this._getSubscribers()?.toArray(),
-			s => { s.onError && s.onError(error); }
+			s => { if(s.onError) s.onError(error); }
 		);
 	}
 
@@ -64,7 +64,7 @@ export default abstract class ObservableBase<T>
 	{
 		processAction(
 			this._unsubscribeAll(true),
-			s => { s.onCompleted && s.onCompleted(); }
+			s => { if(s.onCompleted) s.onCompleted(); }
 		);
 	}
 }

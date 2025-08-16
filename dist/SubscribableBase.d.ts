@@ -3,8 +3,7 @@
  * @license MIT
  */
 import { ExtendedIterable } from '@tsdotnet/collection-base';
-import { DisposableBase } from '@tsdotnet/disposable';
-import Disposable from '@tsdotnet/disposable/dist/Disposable';
+import { type Disposable, DisposableBase } from '@tsdotnet/disposable';
 /**
  * Base class for implementing any subscribable class that expects `Disposable` for releasing subscriptions.
  */

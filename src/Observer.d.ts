@@ -12,4 +12,5 @@ export default interface Observer<T>
 	onNext?: Action<T>;
 	onError?: Action<any>;
 	onCompleted?: Closure;
+// eslint-disable-next-line semi
 }

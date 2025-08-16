@@ -6,7 +6,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const disposable_1 = require("@tsdotnet/disposable");
-const dispose_1 = tslib_1.__importDefault(require("@tsdotnet/disposable/dist/dispose"));
 const ordered_registry_1 = tslib_1.__importDefault(require("@tsdotnet/ordered-registry"));
 const Subscription_1 = tslib_1.__importDefault(require("./Subscription"));
 const NAME = 'SubscribableBase';
@@ -26,16 +25,15 @@ class SubscribableBase extends disposable_1.DisposableBase {
      */
     subscribe(subscriber) {
         var _a;
-        const _ = this;
-        _.throwIfDisposed();
+        this.throwIfDisposed();
         let s = (_a = this.__subscriptions) === null || _a === void 0 ? void 0 : _a.get(subscriber);
         if (s)
             return s; // Ensure only one instance of the existing subscription exists.
-        let _s = _.__subscriptions;
+        let _s = this.__subscriptions;
         if (!_s)
-            _.__subscriptions = _s
+            this.__subscriptions = _s
                 = new ordered_registry_1.default();
-        s = new Subscription_1.default(_, subscriber);
+        s = new Subscription_1.default(this, subscriber);
         _s.add(subscriber, s);
         return s;
     }
@@ -58,14 +56,13 @@ class SubscribableBase extends disposable_1.DisposableBase {
         return (_a = this.__subscriptions) === null || _a === void 0 ? void 0 : _a.map(node => node === null || node === void 0 ? void 0 : node.value.subscriber);
     }
     _unsubscribeAll(returnSubscribers = false) {
-        const _ = this;
-        const _s = _.__subscriptions;
+        const _s = this.__subscriptions;
         if (!_s)
             return undefined;
         const s = _s.map(n => n.value).toArray();
         const u = returnSubscribers ? s.map(o => o.subscriber) : undefined;
         _s.clear(); // Reset...
-        dispose_1.default.these.unsafe(s);
+        disposable_1.dispose.these.unsafe(s);
         return u;
     }
     _onDispose() {

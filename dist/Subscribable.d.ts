@@ -3,7 +3,7 @@
  * @license MIT
  */
 
-import Disposable from '@tsdotnet/disposable/dist/Disposable';
+import { type Disposable } from '@tsdotnet/disposable';
 
 export default interface Subscribable<TSubscriber>
 	extends Disposable
@@ -11,4 +11,5 @@ export default interface Subscribable<TSubscriber>
 	subscribe (observer: TSubscriber): Disposable;
 
 	unsubscribe (observer: TSubscriber): void;
+// eslint-disable-next-line semi
 }

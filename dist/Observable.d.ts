@@ -9,9 +9,10 @@
 import Observer from './Observer';
 import Subscribable from './Subscribable';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export default interface Observable<T>
 	extends Subscribable<Observer<T>>
 {
 
+// eslint-disable-next-line semi
 }

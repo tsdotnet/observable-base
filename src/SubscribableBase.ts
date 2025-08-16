@@ -4,9 +4,7 @@
  */
 
 import {ExtendedIterable} from '@tsdotnet/collection-base';
-import {DisposableBase} from '@tsdotnet/disposable';
-import Disposable from '@tsdotnet/disposable/dist/Disposable';
-import dispose from '@tsdotnet/disposable/dist/dispose';
+import {type Disposable, DisposableBase, dispose} from '@tsdotnet/disposable';
 import OrderedRegistry from '@tsdotnet/ordered-registry';
 import Subscription from './Subscription';
 
@@ -35,17 +33,16 @@ export default class SubscribableBase<TSubscriber>
 	 */
 	subscribe (subscriber: TSubscriber): Disposable
 	{
-		const _ = this;
-		_.throwIfDisposed();
+		this.throwIfDisposed();
 
 		let s = this.__subscriptions?.get(subscriber);
 		if(s) return s; // Ensure only one instance of the existing subscription exists.
 
-		let _s = _.__subscriptions;
-		if(!_s) _.__subscriptions = _s
+		let _s = this.__subscriptions;
+		if(!_s) this.__subscriptions = _s
 			= new OrderedRegistry<TSubscriber, Subscription<TSubscriber>>();
 
-		s = new Subscription(_, subscriber);
+		s = new Subscription(this, subscriber);
 		_s.add(subscriber, s);
 
 		return s;
@@ -79,8 +76,7 @@ export default class SubscribableBase<TSubscriber>
 	protected _unsubscribeAll (returnSubscribers: boolean): TSubscriber[] | undefined;
 	protected _unsubscribeAll (returnSubscribers: boolean = false): TSubscriber[] | undefined
 	{
-		const _ = this;
-		const _s = _.__subscriptions;
+		const _s = this.__subscriptions;
 		if(!_s) return undefined;
 		const s = _s.map(n => n.value).toArray();
 		const u = returnSubscribers ? s.map(o => o!.subscriber) : undefined;

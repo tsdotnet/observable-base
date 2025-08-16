@@ -5,7 +5,7 @@
  */
 
 import ObservableBase from './ObservableBase';
-import Observer from './Observer';
+import type Observer from './Observer';
 
 /**
  * Base class for creating observable chains.
