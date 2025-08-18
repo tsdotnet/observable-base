@@ -5,9 +5,6 @@
  */
 import ObservableBase from './ObservableBase';
 import type Observer from './Observer';
-/**
- * Base class for creating observable chains.
- */
 export default class ObservableNodeBase<T> extends ObservableBase<T> implements Observer<T> {
     onNext(value: T): void;
     onError(error: unknown): void;
