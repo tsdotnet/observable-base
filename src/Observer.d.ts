@@ -9,8 +9,8 @@ import {Action, Closure} from '@tsdotnet/common-interfaces';
 export default interface Observer<T>
 {
 	// onNext is optional because an observer may only care about onCompleted.
-	onNext?: Action<T> | undefined;
-	onError?: Action<any> | undefined;
+	onNext?: Action<T> | Closure | undefined;
+	onError?: Action<any> | Closure | undefined;
 	onCompleted?: Closure | undefined;
 // eslint-disable-next-line semi
 }

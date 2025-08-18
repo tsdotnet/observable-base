@@ -87,6 +87,7 @@ describe('ObservableBase', () => {
 		
 		expect(() => {
 			observable.subscribe(
+        //@ts-expect-error This should not be allowed to happen, but if attempted should throw an error
 				{ onNext: () => {} },
 				() => {} // This should cause an error
 			);
