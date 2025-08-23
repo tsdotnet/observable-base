@@ -8,14 +8,13 @@ const tslib_1 = require("tslib");
 const disposable_1 = require("@tsdotnet/disposable");
 const ordered_registry_1 = tslib_1.__importDefault(require("@tsdotnet/ordered-registry"));
 const Subscription_1 = tslib_1.__importDefault(require("./Subscription"));
-const NAME = 'SubscribableBase';
 class SubscribableBase extends disposable_1.DisposableBase {
     constructor() {
-        super(NAME);
+        super();
     }
     subscribe(subscriber) {
         var _a;
-        this.throwIfDisposed();
+        this.assertIsAlive();
         let s = (_a = this.__subscriptions) === null || _a === void 0 ? void 0 : _a.get(subscriber);
         if (s)
             return s;

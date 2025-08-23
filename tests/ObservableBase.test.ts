@@ -180,4 +180,68 @@ describe('ObservableBase', () => {
 		
 		consoleSpy.mockRestore();
 	});
+
+	it('should throw errors when console is not available', () => {
+		const observable = new TestObservable<number>();
+		
+		// Mock console to be undefined
+		const originalConsole = globalThis.console;
+		(globalThis as any).console = undefined;
+		
+		// Subscribe with a callback that throws an error
+		const subscription = observable.subscribe(() => {
+			throw new Error('Test error');
+		});
+		
+		try {
+			expect(() => observable.triggerNext(1)).toThrow();
+		} finally {
+			// Restore console
+			globalThis.console = originalConsole;
+			subscription.dispose();
+		}
+	});
+
+	it('should provide access to subscribers', () => {
+		const observable = new TestObservable<number>();
+		const fn1 = vi.fn();
+		const fn2 = vi.fn();
+		
+		const sub1 = observable.subscribe(fn1);
+		const sub2 = observable.subscribe(fn2);
+		
+		// Access protected method via type assertion
+		const subscribers = (observable as any)._getSubscribers();
+		expect(subscribers).toBeDefined();
+		
+		const subscriberArray = Array.from(subscribers || []);
+		expect(subscriberArray).toHaveLength(2);
+		
+		// Should have observer objects with onNext functions
+		expect(subscriberArray[0]).toHaveProperty('onNext', fn1);
+		expect(subscriberArray[1]).toHaveProperty('onNext', fn2);
+		
+		sub1.dispose();
+		sub2.dispose();
+	});
+
+	it('should handle unsubscribeAll method', () => {
+		const observable = new TestObservable<number>();
+		const fn1 = vi.fn();
+		const fn2 = vi.fn();
+		
+		observable.subscribe(fn1);
+		observable.subscribe(fn2);
+		
+		observable.triggerNext(1);
+		expect(fn1).toHaveBeenCalledWith(1);
+		expect(fn2).toHaveBeenCalledWith(1);
+		
+		// Test unsubscribeAll
+		observable.unsubscribeAll();
+		
+		observable.triggerNext(2);
+		expect(fn1).toHaveBeenCalledTimes(1); // Should not be called again
+		expect(fn2).toHaveBeenCalledTimes(1); // Should not be called again
+	});
 });

@@ -8,8 +8,6 @@ import {type Disposable, DisposableBase, dispose} from '@tsdotnet/disposable';
 import OrderedRegistry from '@tsdotnet/ordered-registry';
 import Subscription from './Subscription';
 
-const NAME = 'SubscribableBase';
-
 /**
  * Base class for implementing any subscribable class that expects `Disposable` for releasing subscriptions.
  */
@@ -20,7 +18,7 @@ export default class SubscribableBase<TSubscriber>
 
 	constructor ()
 	{
-		super(NAME);
+		super();
 	}
 
 	// It is possible that the same observer could call subscribe more than once and therefore we need to retain a single instance of the subscriber.
@@ -33,7 +31,7 @@ export default class SubscribableBase<TSubscriber>
 	 */
 	subscribe (subscriber: TSubscriber): Disposable
 	{
-		this.throwIfDisposed();
+		this.assertIsAlive();
 
 		let s = this.__subscriptions?.get(subscriber);
 		if(s) return s; // Ensure only one instance of the existing subscription exists.

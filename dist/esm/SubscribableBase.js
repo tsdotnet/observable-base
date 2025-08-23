@@ -6,14 +6,13 @@ import Subscription from './Subscription.js';
  * @author electricessence / https://github.com/electricessence/
  * @license MIT
  */
-const NAME = 'SubscribableBase';
 class SubscribableBase extends DisposableBase {
     __subscriptions;
     constructor() {
-        super(NAME);
+        super();
     }
     subscribe(subscriber) {
-        this.throwIfDisposed();
+        this.assertIsAlive();
         let s = this.__subscriptions?.get(subscriber);
         if (s)
             return s;
