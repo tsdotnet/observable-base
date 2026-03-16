@@ -7,8 +7,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const exceptions_1 = require("@tsdotnet/exceptions");
-const SubscribableBase_1 = tslib_1.__importDefault(require("./SubscribableBase"));
-class ObservableBase extends SubscribableBase_1.default {
+const SubscribableBase_js_1 = tslib_1.__importDefault(require("./SubscribableBase.js"));
+class ObservableBase extends SubscribableBase_js_1.default {
     subscribe(subscriber, onError, onCompleted) {
         if (typeof subscriber == 'function') {
             return super.subscribe({

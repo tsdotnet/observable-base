@@ -6,8 +6,8 @@
  */
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
-const ObservableBase_1 = tslib_1.__importDefault(require("./ObservableBase"));
-class ObservableNodeBase extends ObservableBase_1.default {
+const ObservableBase_js_1 = tslib_1.__importDefault(require("./ObservableBase.js"));
+class ObservableNodeBase extends ObservableBase_js_1.default {
     onNext(value) {
         this._onNext(value);
     }

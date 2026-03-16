@@ -7,9 +7,9 @@
 import {Action, Closure} from '@tsdotnet/common-interfaces';
 import {type Disposable} from '@tsdotnet/disposable';
 import {ArgumentException} from '@tsdotnet/exceptions';
-import type Observable from './Observable';
-import type Observer from './Observer';
-import SubscribableBase from './SubscribableBase';
+import type Observable from './Observable.js';
+import type Observer from './Observer.js';
+import SubscribableBase from './SubscribableBase.js';
 
 // Can be used as a base class, mixin, or simply reference on how to implement the pattern.
 

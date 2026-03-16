@@ -4,7 +4,7 @@
  */
 
 import type {DisposableAware} from '@tsdotnet/disposable';
-import type Subscribable from './Subscribable';
+import type Subscribable from './Subscribable.js';
 
 /**
  * A registration that can be disposed in order to cancel publishing to a subscriber.

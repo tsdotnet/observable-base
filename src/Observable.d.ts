@@ -1,4 +1,4 @@
-﻿/*!
+/*!
 * @author electricessence / https://github.com/electricessence/
 * @license MIT
 * Reference:
@@ -6,8 +6,8 @@
 *   https://msdn.microsoft.com/en-us/library/dd990377.aspx
 */
 
-import Observer from './Observer';
-import Subscribable from './Subscribable';
+import Observer from './Observer.js';
+import Subscribable from './Subscribable.js';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export default interface Observable<T>

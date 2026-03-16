@@ -4,8 +4,8 @@
  * Reference: http://referencesource.microsoft.com/#mscorlib/system/IObserver.cs
  */
 
-import ObservableBase from './ObservableBase';
-import type Observer from './Observer';
+import ObservableBase from './ObservableBase.js';
+import type Observer from './Observer.js';
 
 /**
  * Base class for creating observable chains.

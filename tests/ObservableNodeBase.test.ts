@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import ObservableNodeBase from '../src/ObservableNodeBase';
+import ObservableNodeBase from '../src/ObservableNodeBase.js';
 
 describe('ObservableNodeBase', () => {
 

@@ -3,7 +3,7 @@
  * @license MIT
  */
 import type { DisposableAware } from '@tsdotnet/disposable';
-import type Subscribable from './Subscribable';
+import type Subscribable from './Subscribable.js';
 export default class Subscription<T> implements DisposableAware {
     private _subscribable;
     private _subscriber;

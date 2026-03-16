@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = require("tslib");
 const disposable_1 = require("@tsdotnet/disposable");
 const ordered_registry_1 = tslib_1.__importDefault(require("@tsdotnet/ordered-registry"));
-const Subscription_1 = tslib_1.__importDefault(require("./Subscription"));
+const Subscription_js_1 = tslib_1.__importDefault(require("./Subscription.js"));
 class SubscribableBase extends disposable_1.DisposableBase {
     constructor() {
         super();
@@ -22,7 +22,7 @@ class SubscribableBase extends disposable_1.DisposableBase {
         if (!_s)
             this.__subscriptions = _s
                 = new ordered_registry_1.default();
-        s = new Subscription_1.default(this, subscriber);
+        s = new Subscription_js_1.default(this, subscriber);
         _s.add(subscriber, s);
         return s;
     }

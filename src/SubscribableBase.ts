@@ -6,7 +6,7 @@
 import {ExtendedIterable} from '@tsdotnet/collection-base';
 import {type Disposable, DisposableBase, dispose} from '@tsdotnet/disposable';
 import OrderedRegistry from '@tsdotnet/ordered-registry';
-import Subscription from './Subscription';
+import Subscription from './Subscription.js';
 
 /**
  * Base class for implementing any subscribable class that expects `Disposable` for releasing subscriptions.

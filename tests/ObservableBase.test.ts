@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import ObservableBase from '../src/ObservableBase';
+import ObservableBase from '../src/ObservableBase.js';
 
 // Concrete implementation for testing
 class TestObservable<T> extends ObservableBase<T> {
