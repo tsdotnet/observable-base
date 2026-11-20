@@ -1,0 +1,17 @@
+/*!
+ * @author electricessence / https://github.com/electricessence/
+ * @license MIT
+ * Reference: http://referencesource.microsoft.com/#mscorlib/system/IObserver.cs
+ */
+import { Action, Closure } from '@tsdotnet/common-interfaces';
+import { type Disposable } from '@tsdotnet/disposable';
+import type Observable from './Observable.js';
+import type Observer from './Observer.js';
+import SubscribableBase from './SubscribableBase.js';
+export default abstract class ObservableBase<T> extends SubscribableBase<Observer<T>> implements Observable<T> {
+    subscribe(subscriber: Observer<T>): Disposable;
+    subscribe(subscriber: Action<T>, onError?: Action<any>, onCompleted?: Closure): Disposable;
+    protected _onNext(value: T): void;
+    protected _onError(error: unknown): void;
+    protected _onCompleted(): void;
+}

@@ -1,1 +1,1 @@
-{"version":3,"file":"observable-base.js","sourceRoot":"","sources":["../../src/observable-base.ts"],"names":[],"mappings":";AAAA;;;GAGG;;;;AAKH,oFAAiD;AAOhD,yBAPM,2BAAc,CAON;AANf,4FAAyD;AAOxD,6BAPM,+BAAkB,CAON;AANnB,wFAAqD;AAOpD,2BAPM,6BAAgB,CAON"}
+{"version":3,"file":"observable-base.js","sourceRoot":"","sources":["../../src/observable-base.ts"],"names":[],"mappings":";AAAA;;;GAGG;;;;AAKH,oFAAiD;QAOhD,cAAc,GAPR,2BAAc;AACrB,4FAAyD;QAOxD,kBAAkB,GAPZ,+BAAkB;AACzB,wFAAqD;QAOpD,gBAAgB,GAPV,6BAAgB"}
