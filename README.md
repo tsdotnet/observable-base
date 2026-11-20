@@ -1,4 +1,4 @@
-<a href="https://tsdotnet.github.io/observable-base/"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/observable-base@master/assets/banner.svg" alt="@tsdotnet/observable-base: One source, many listeners. Observable base classes, no framework."></a>
+<a name="banner"><img src="https://cdn.jsdelivr.net/gh/tsdotnet/observable-base@master/assets/banner.svg" alt="@tsdotnet/observable-base: One source, many listeners. Observable base classes, no framework."></a>
 
 [![npm version](https://img.shields.io/npm/v/@tsdotnet/observable-base.svg?style=flat-square)](https://www.npmjs.com/package/@tsdotnet/observable-base)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/tsdotnet/observable-base/blob/master/LICENSE)
