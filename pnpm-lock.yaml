@@ -41,8 +41,8 @@ importers:
         specifier: ^1.0.6
         version: 1.0.6
       '@tsdotnet/disposable':
-        specifier: ^2.1.0
-        version: 2.1.0
+        specifier: ^2.1.1
+        version: 2.1.1
       '@tsdotnet/exceptions':
         specifier: ^1.3.0
         version: 1.3.0
@@ -714,8 +714,8 @@ packages:
   '@tsdotnet/compare@1.8.0':
     resolution: {integrity: sha512-ENtkaRKgKtRmf8EBSZKIzlSjfQ29SmWBea2h2KmPYl2ldN3cF+QFFXia60wk/OeaEomXDQ3JYHFmAun/lqcWbA==}
 
-  '@tsdotnet/disposable@2.1.0':
-    resolution: {integrity: sha512-Zo/hvGcAhsv4CQhiaUGT/Q6cBDbb5d0KHr0Cz2j9NUCJtKMCCy+sOtq0pn77rm5KoudAjRODv+R6XvWTKcMUDA==}
+  '@tsdotnet/disposable@2.1.1':
+    resolution: {integrity: sha512-GVhMLQPM9GUFZtyIm3YWcKJKjnf0q5yd/V/mNpFiqDbKvWh64uCVU6lirPl6Izb9/LXc2Qgxn86cQxhpDD1ylg==}
 
   '@tsdotnet/exceptions@1.3.0':
     resolution: {integrity: sha512-hL2tCtdlPaEZO/pZ/57DIHMt80Iex3s7ooyH1br/zvGFMB6ms0XzMnBPhzVvgjZjEgGtbtRAsyG6VWjePpY+0w==}
@@ -2169,7 +2169,7 @@ snapshots:
       '@tsdotnet/type': 1.3.0
       tslib: 2.9.1
 
-  '@tsdotnet/disposable@2.1.0':
+  '@tsdotnet/disposable@2.1.1':
     dependencies:
       tslib: 2.9.1
 
