@@ -4,6 +4,10 @@
     (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory((global.tsdotnet = global.tsdotnet || {}, global.tsdotnet.observableBase = global.tsdotnet.observableBase || {}), global.tsdotnet.exceptions, global.tsdotnet.disposable, global.tsdotnet.orderedRegistry));
 })(this, (function (exports, exceptions, disposable, OrderedRegistry) { 'use strict';
 
+    function _interopDefault (e) { return e && e.__esModule ? e : { default: e }; }
+
+    var OrderedRegistry__default = /*#__PURE__*/_interopDefault(OrderedRegistry);
+
     /*!
      * @author electricessence / https://github.com/electricessence/
      * @license MIT
@@ -55,7 +59,7 @@
             let _s = this.__subscriptions;
             if (!_s)
                 this.__subscriptions = _s
-                    = new OrderedRegistry();
+                    = new OrderedRegistry__default.default();
             s = new Subscription(this, subscriber);
             _s.add(subscriber, s);
             return s;
